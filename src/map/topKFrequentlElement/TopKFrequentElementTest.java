@@ -34,7 +34,7 @@ class TopKFrequentElementTest {
         int[] ints = {4,1,-1,2,-1,2,3};
         QuickSelectApproach quickSelectApproach = new QuickSelectApproach();
         int[] res = quickSelectApproach.topKFrequent(ints, 2);
-        Assertions.assertTrue(res[0]==-1&&res[1]==-1);
+        Assertions.assertTrue(res[0]==-1&&res[1]==2 || res[0]==2&&res[1]==-1);
     }
 
 }

@@ -43,17 +43,14 @@ public class QuickSelectApproach {
 
     private int partition(int left, int right) {
 
-        Random random_num = new Random();
-        int pivot_index = left + random_num.nextInt(right - left);
 
         int i = left-1;
-        int pivot = unique[pivot_index];
-        swap(pivot_index, right);
+        int pivot = unique[right];
         int pivotFreq = map1.get(pivot);
         while(left<right) {
             int LE = unique[left];
             int LFR = map1.get(LE);
-            if(LFR < pivotFreq) {
+            if(LFR <= pivotFreq) {
                 swap(i+1, left);
                 left++;
                 i++;
