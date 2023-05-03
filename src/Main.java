@@ -78,5 +78,6 @@ public class Main {
         BitwiseValidSudoku bitwiseValidSudoku = new BitwiseValidSudoku();
         System.out.println(bitwiseValidSudoku.isValidSudoku(sudoku));
 
+        System.out.println((int)Math.sqrt(12));
     }
 }
