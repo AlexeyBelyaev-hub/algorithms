@@ -1,8 +1,6 @@
-package queue;
+package queue.wallandgates;
 
 import org.junit.jupiter.api.Assertions;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class WallsAndGatesTest {
 

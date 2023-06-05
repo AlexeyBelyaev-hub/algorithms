@@ -1,4 +1,4 @@
-package queue;
+package queue.wallandgates;
 
 import java.util.LinkedList;
 import java.util.List;
