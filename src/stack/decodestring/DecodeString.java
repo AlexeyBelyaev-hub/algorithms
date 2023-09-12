@@ -19,7 +19,16 @@ public class DecodeString {
                     characters.add(stack.pollFirst());
                 }
                 stack.pollFirst(); // убираем [
-                Integer k = Integer.valueOf(stack.pollFirst().toString());
+
+                int base = 1;
+                int k = 0;
+                //get k
+                while (!stack.isEmpty() && Character.isDigit(stack.peek())) {
+                    k = k + (stack.pop() - '0') * base;
+                    base *= 10;
+                }
+
+                //Integer k = Integer.valueOf(stack.pollFirst().toString());
                 while (k > 0) {
                     for (int j =  characters.size() - 1; j >= 0; j--) {
                         stack.addFirst(characters.get(j));
